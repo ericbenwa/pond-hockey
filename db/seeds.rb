@@ -6,8 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+	# Deletes all users to start a fresh database.
 	User.delete_all
 
+	# List of all users.
 	users_list = [
 	  [ "benwa02@gmail.com", "12345678", "12345678"],
 	  [ "ericbenwa@gmail.com", "12345678", "12345678"],
@@ -16,6 +18,7 @@
 	  [ "zar0000@gmail.com", "12345678", "12345678"],
 	]
 
+	# Create all users for database.
 	users_list.each do |email, password, password_confirmation|
 	  User.create!(email: email, password: password, password_confirmation: password_confirmation)
 	end

@@ -1,12 +1,12 @@
 class PondsController < ApplicationController
 
-  # GET /ponds
-  # GET /ponds.json
-  def index
-    @ponds = Pond.all
-  end
+	# Get all ponds.
+	def index
+		@ponds = Pond.all
+	end
 
+	# Get an individual pond.
 	def show
-	@pond = Pond.find(params[:id])
-  end
+		@pond = Pond.find(params[:id])
+	end
 end

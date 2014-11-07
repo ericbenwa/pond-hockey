@@ -6,18 +6,24 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-	# users_list = [
-	#   [ "benwa02@gmail.com"],
-	#   [ "ericbenwa@gmail.com"],
-	#   [ "eric@ebenoit.com"],
-	#   [ "e@fitsor.com"],
-	#   [ "zar0000@gmail.com"],
-	# ]
+	User.delete_all
 
-	# users_list.each do |email|
-	#   User.create(email: email)
-	# end
+	users_list = [
+	  [ "benwa02@gmail.com", "12345678", "12345678"],
+	  [ "ericbenwa@gmail.com", "12345678", "12345678"],
+	  [ "eric@ebenoit.com", "12345678", "12345678"],
+	  [ "e@fitsor.com", "12345678", "12345678"],
+	  [ "zar0000@gmail.com", "12345678", "12345678"],
+	]
 
+	users_list.each do |email, password, password_confirmation|
+	  User.create!(email: email, password: password, password_confirmation: password_confirmation)
+	end
+
+	# Deletes all ponds to start a fresh database.
+	Pond.delete_all
+
+	# List of all ponds.
 	ponds_list = [
 	  [ "348 Franklin Street", "Cambridge", "MA", 0 ],
 	  [ "297 Cardinal Street", "Cambridge", "MA", 0 ],
@@ -25,6 +31,7 @@
 	  [ "22 Church Street", "Whitman", "MA", 0 ]
 	]
 
+	# Create all ponds for database.
 	ponds_list.each do |street, city, state, user_id|
-	  Pond.create(street: street, city: city, state: state, user_id: user_id)
+	  Pond.create!(street: street, city: city, state: state, user_id: user_id)
 	end

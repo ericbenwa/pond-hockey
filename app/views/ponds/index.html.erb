@@ -1,0 +1,3 @@
+<% @ponds.each do |pond| %>
+	<div><%= link_to "#{pond.street}, #{pond.city} #{pond.state}", pond_path(pond.id) %></div>
+<% end %>

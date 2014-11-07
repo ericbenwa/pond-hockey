@@ -1,6 +1,5 @@
 class PondsController < ApplicationController
-	ForecastIO.api_key = "804882f53093e857db785207fe59b645"
-	# ForecastIO.api_key = ENV["forecast_api_key"]
+	ForecastIO.api_key = ENV["forecast_api_key"]
 
 	# Get all ponds.
 	def index

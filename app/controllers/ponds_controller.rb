@@ -9,7 +9,9 @@ class PondsController < ApplicationController
 	# Get an individual pond.
 	def show
 		@pond = Pond.find(params[:id])
-		@forecast = ForecastIO.forecast(37.8267, -122.423)
+		lat = @pond.lat
+		long = @pond.long
+		@forecast = ForecastIO.forecast(lat, long)
 	end
 
 	# Create a pond.

@@ -28,13 +28,13 @@
 
 	# List of all ponds.
 	ponds_list = [
-	  [ "348 Franklin Street", "Cambridge", "MA", 0 ],
-	  [ "297 Cardinal Street", "Cambridge", "MA", 0 ],
-	  [ "62 Broadway Street", "Hanover", "MA", 0 ],
-	  [ "22 Church Street", "Whitman", "MA", 0 ]
+	  [ "348 Franklin Street", "Cambridge", "MA", 0, 42.366020, -71.107833 ],
+	  [ "297 Cardinal Street", "Cambridge", "MA", 0, 42.369661, -71.089898 ],
+	  [ "62 Broadway Street", "Hanover", "MA", 0, 42.361867, -71.057032 ],
+	  [ "22 Church Street", "Whitman", "MA", 0, 42.079071, -70.935855 ]
 	]
 
 	# Create all ponds for database.
-	ponds_list.each do |street, city, state, user_id|
-	  Pond.create!(street: street, city: city, state: state, user_id: user_id)
+	ponds_list.each do |street, city, state, user_id, lat, long|
+	  Pond.create!(street: street, city: city, state: state, user_id: user_id, lat: lat, long: long)
 	end

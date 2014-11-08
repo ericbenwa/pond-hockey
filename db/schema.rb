@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141107002806) do
+ActiveRecord::Schema.define(version: 20141108220540) do
 
   create_table "ponds", force: true do |t|
     t.datetime "created_at"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20141107002806) do
     t.string   "city"
     t.string   "state"
     t.integer  "user_id"
+    t.float    "lat"
+    t.float    "long"
   end
 
   add_index "ponds", ["user_id"], name: "index_ponds_on_user_id"

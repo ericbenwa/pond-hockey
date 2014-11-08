@@ -11,4 +11,9 @@ class PondsController < ApplicationController
 		@pond = Pond.find(params[:id])
 		@forecast = ForecastIO.forecast(37.8267, -122.423)
 	end
+
+	# Create a pond.
+	def create
+
+	end
 end

@@ -1,5 +1,9 @@
 <%= @pond.street %>
+<%= @pond.lat %>
+<%= @pond.long %>
 
+<p>
 <%= @forecast.currently.summary %>
 <%= @forecast.currently.icon %>
-<%= @forecast.currently.temperature %>
+<%= @forecast.currently.temperature.round %>
+</p>

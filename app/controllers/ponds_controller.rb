@@ -16,8 +16,21 @@ class PondsController < ApplicationController
 		@forecast = ForecastIO.forecast(lat, long)
 	end
 
+	def new
+		@pond = Pond.new
+		@user = user_session
+	end
+
 	# Create a pond.
 	def create
-
+		@user = user_session
+		@pond = Pond.create!(params.require(:pond).permit(:street, :city, :state, :lat, :long, :user_id))
+		redirect_to @pond
 	end
+
+	private
+
+		def product_params
+			params.require(:pond).permit(:street, :city, :state, :lat, :long, :user_id)
+		end
 end

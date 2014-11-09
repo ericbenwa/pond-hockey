@@ -1,0 +1,18 @@
+<h1>New Pond</h1>
+
+<%= form_for([@pond]) do |f| %>
+	<p><%= f.label(:street) %><br />
+	<%= f.text_field(:street) %></p>
+	<p><%= f.label(:city) %><br />
+	<%= f.text_field(:city) %></p>
+	<p><%= f.label(:state) %><br />
+	<%= f.text_field(:state) %></p>
+	<p><%= f.label(:lat) %><br />
+	<%= f.text_field(:lat) %></p>
+	<p><%= f.label(:long) %><br />
+	<%= f.text_field(:long) %></p>
+	<p><%= f.label(:user_id) %><br />
+	<%= f.text_field(:user_id) %></p>
+
+	<%= submit_tag("Add Pond") %>
+<% end %>

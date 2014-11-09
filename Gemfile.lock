@@ -62,6 +62,7 @@ GEM
       hashie
       multi_json
     fssm (0.2.10)
+    geocoder (1.2.6)
     hashie (3.3.1)
     hike (1.2.3)
     i18n (0.6.11)
@@ -146,6 +147,7 @@ DEPENDENCIES
   devise
   figaro
   forecast_io
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.6)

@@ -29,6 +29,8 @@
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
 
+        <%= link_to "Ponds", ponds_path %>
+
         <% if user_signed_in? %>
           <p><%= link_to "Edit Account", edit_user_registration_path %> - <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></p>
         <% else %>

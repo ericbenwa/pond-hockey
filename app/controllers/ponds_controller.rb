@@ -11,6 +11,8 @@ class PondsController < ApplicationController
 		@pond = Pond.find(params[:id])
 		lat = @pond.lat
 		long = @pond.long
+
+		# Get weather for pond.
 		@forecast = ForecastIO.forecast(lat, long)
 	end
 

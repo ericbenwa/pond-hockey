@@ -23,11 +23,13 @@
 
   <body>
 
-    <div class="row">
+    <div class="row nav fullWidth">
       <div class="large-12 columns">
 
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
+
+        Pond Hockey!
 
         <%= link_to "Ponds", ponds_path %>
 
@@ -36,9 +38,13 @@
         <% else %>
           <p><%= link_to "Sign In", user_session_path %> - <%= link_to "Create Account", new_user_registration_path %></p>
         <% end %>
+        <%= link_to "About" %> - <%= mail_to "benwa02@gmail.com" %>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="large-12 columns">
         <%= yield %>
-
       </div>
     </div>
     

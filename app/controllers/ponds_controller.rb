@@ -28,6 +28,7 @@ class PondsController < ApplicationController
 		redirect_to @pond
 	end
 
+	# Setup but not in use currently.
 	private
 
 		def product_params

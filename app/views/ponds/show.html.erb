@@ -1,11 +1,21 @@
-<p>
-<%= @pond.street %>
-<%= @pond.lat %>
-<%= @pond.long %>
-</p>
+<div class="row pond">
+	<div class="large-12 columns">
+		<h1><%= @pond.street %></h1>
 
-<p>
-<%= @forecast.currently.summary %>
-<%= @forecast.currently.icon %>
-<%= @forecast.currently.temperature.round %>
-</p>
+		<p>
+		<%= @pond.lat %>
+		<%= @pond.long %>
+		</p>
+
+		<p>
+		<%= @forecast.currently.summary %>
+		<%= @forecast.currently.icon %>
+		<%= @forecast.currently.temperature.round %>
+		</p>
+
+	</div>
+</div>
+
+<%= render "shared/photos" %>
+
+<%= render "shared/comments" %>

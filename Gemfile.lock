@@ -61,7 +61,7 @@ GEM
       faraday
       hashie
       multi_json
-    foundation-rails (5.4.3.1)
+    foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     fssm (0.2.10)
@@ -154,7 +154,7 @@ DEPENDENCIES
   devise
   figaro
   forecast_io
-  foundation-rails (= 5.4.3.1)
+  foundation-rails (= 5.4.5)
   geocoder
   jbuilder (~> 2.0)
   jquery-rails

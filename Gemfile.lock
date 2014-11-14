@@ -154,7 +154,7 @@ DEPENDENCIES
   devise
   figaro
   forecast_io
-  foundation-rails (= 5.4.5)
+  foundation-rails
   geocoder
   jbuilder (~> 2.0)
   jquery-rails

@@ -1441,3 +1441,47 @@ $include-html-global-classes: $include-html-classes;
 // $include-accessibility-classes: true;
 
 @import 'foundation';
+
+body {
+	background: #ccc;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+// Play styles, delete later.
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+.nav {
+	background: #000;
+}
+
+.pond {
+	// background: image-url("6363241295_9d2ba50bdc_o.jpg") no-repeat center bottom;
+}
+
+.photos {
+	background: #eee;
+	padding: 10px 0;
+}
+
+.photos img {
+	background: #ccc;
+	border-radius: 3px;
+}
+
+.comments {
+
+	span {
+		color: #8d8d8f;
+		display: block;
+	}
+}

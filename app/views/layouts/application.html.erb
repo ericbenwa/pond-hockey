@@ -6,14 +6,38 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
 
-    <%= yield %>
+    <div class="row nav fullWidth">
+      <div class="large-12 columns">
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        Pond Hockey!
+
+        <%= link_to "Ponds", ponds_path %>
+
+        <% if user_signed_in? %>
+          <p><%= link_to "Edit Account", edit_user_registration_path %> - <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></p>
+        <% else %>
+          <p><%= link_to "Sign In", user_session_path %> - <%= link_to "Create Account", new_user_registration_path %></p>
+        <% end %>
+        <%= link_to "About" %> - <%= mail_to "benwa02@gmail.com" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <%= yield %>
+      </div>
+    </div>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>

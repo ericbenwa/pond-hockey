@@ -13,7 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # Use Foundation
 gem 'compass-rails' # you need this or you get an err
-gem 'foundation-rails', '5.4.5'
 # Use weather.io
 gem 'forecast_io'
 # Use figaro

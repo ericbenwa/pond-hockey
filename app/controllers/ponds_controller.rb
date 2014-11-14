@@ -1,4 +1,5 @@
 class PondsController < ApplicationController
+	before_action :authenticate_user!
 	ForecastIO.api_key = ENV["forecast_api_key"]
 
 	# Get all ponds.
@@ -14,6 +15,13 @@ class PondsController < ApplicationController
 
 		# Get weather for pond.
 		@forecast = ForecastIO.forecast(lat, long)
+		temp = @forecast.currently.temperature.round
+
+		if temp < 40
+			@stupid = "Cold"
+		else
+			@stupid = "Warm"
+		end
 	end
 
 	def new

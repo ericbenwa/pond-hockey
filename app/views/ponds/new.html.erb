@@ -11,9 +11,7 @@
 	<%= f.text_field(:lat) %></p>
 	<p><%= f.label(:long) %><br />
 	<%= f.text_field(:long) %></p>
-	<p><%= f.label(:user_id) %><br />
-	<%= current_user.id %>
-	<%= f.text_field(:user_id) %></p>
+	<%= f.hidden_field :user_id, :value => current_user.id %>
 
 	<%= submit_tag("Add Pond") %>
 <% end %>

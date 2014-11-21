@@ -2,6 +2,21 @@ Rails.application.routes.draw do
   devise_for :users
   resources :ponds
 
+  # NEED TO ADD THIS LATER
+  # class Post < ActiveRecord::Base
+  #   has_many :comments
+  # end
+
+  # class Comments < ActiveRecord::Base
+  #   belongs_to :post
+  # end
+
+  # # routes.rb
+  # resources :posts do
+  #   resources :comments
+  # end
+  # NEED TO ADD ABOVE ITEM LATER
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

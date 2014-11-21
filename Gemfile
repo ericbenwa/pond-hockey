@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use Foundation
 gem 'compass-rails' # you need this or you get an err
 gem 'foundation-rails', '>=5.4.5.0'
+# Use google maps
+gem 'gmaps4rails'
 # Use weather.io
 gem 'forecast_io'
 # Use figaro

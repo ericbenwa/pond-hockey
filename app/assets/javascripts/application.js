@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require underscore-min
+//= require gmaps/google
 //= require_tree .
 
 $(document).foundation();

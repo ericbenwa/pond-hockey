@@ -1,0 +1,19 @@
+<div class="row comments">
+	<div class="large-12 columns">
+		<% if user_signed_in? %>
+        	<p>Write a comment.</p>
+
+	        <%= form_for([@comment]) do |f| %>
+				<p><%= f.text_field(:comment) %></p>
+				<%= f.hidden_field :user_id, :value => current_user.id %>
+				<%= f.hidden_field :pond_id, :value => @pond.id %>
+
+				<%= submit_tag("Add Comment") %>
+			<% end %>
+
+			<% else %>
+				<p>Sign in to write a comment.</p>
+
+		<% end %>
+	</div>
+</div>

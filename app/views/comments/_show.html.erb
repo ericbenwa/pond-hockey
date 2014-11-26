@@ -1,0 +1,9 @@
+<h2>Comments</h2>
+
+<% @comments.each do |comment| %>
+	<p>
+		<%= comment.comment %><br />
+		User ID <%= comment.user_id %><br />
+		<%= User.where(id: comment.user_id) %>
+	</p>
+<% end %>

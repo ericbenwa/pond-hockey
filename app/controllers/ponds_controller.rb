@@ -17,11 +17,16 @@ class PondsController < ApplicationController
 		@forecast = ForecastIO.forecast(lat, long)
 		temp = @forecast.currently.temperature.round
 
+		# Merely a demonstration of utilizing data to regurgitate.
 		if temp < 40
 			@stupid = "Cold"
 		else
 			@stupid = "Warm"
 		end
+
+		@comment = Comment.new
+
+		@comments = Comment.where(pond_id: @pond)
 	end
 
 	def new

@@ -22,12 +22,13 @@
 
 <!-- <%= render "shared/photos" %> -->
 
-<%= render "shared/comments" %>
+<%= render "comments/show" %>
+
+<%= render "comments/new" %>
 
 <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
-
 
 <script>
 	handler = Gmaps.build('Google');

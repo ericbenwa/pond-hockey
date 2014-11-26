@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :ponds
+  resources :comments
 
   # NEED TO ADD THIS LATER
   # class Post < ActiveRecord::Base

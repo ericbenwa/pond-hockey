@@ -3,8 +3,8 @@
 <% @comments.each do |comment| %>
 	<p>
 		<%= comment.comment %><br />
-		User ID <%= comment.user_id %><br />
-		<% test = User.find(comment.user_id) %>
-		<%= test.email %>
+		<% user = User.find(comment.user_id) %>
+		<em>by <%= "by #{user.email} on #{user.created_at}" %></em>
 	</p>
+
 <% end %>

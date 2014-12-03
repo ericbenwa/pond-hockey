@@ -35,6 +35,6 @@
 	]
 
 	# Create all ponds for database.
-	ponds_list.each do |street, city, state, user_id, lat, long|
-	  Pond.create!(street: street, city: city, state: state, user_id: user_id, lat: lat, long: long)
+	ponds_list.each do |street, city, state, user_id, latitude, longitude|
+	  Pond.create!(street: street, city: city, state: state, user_id: user_id, latitude: latitude, longitude: longitude)
 	end

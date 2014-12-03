@@ -4,7 +4,7 @@
 	<p>
 		<%= comment.comment %><br />
 		<% user = User.find(comment.user_id) %>
-		<em>by <%= "by #{user.email} on #{user.created_at}" %></em>
+		<em><%= "by #{user.email} on #{user.created_at}" %></em>
 	</p>
 
 <% end %>

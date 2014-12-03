@@ -40,10 +40,19 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
         "width":  36,
         "height": 36
       },
-      "infowindow": "hello!"
+      "infowindow": "Pond"
     }
   ]);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });
 </script>
+
+<div>
+	<h4>Nearby Ponds</h4>
+	<% for pond in @pond.nearbys(10) %>
+		<ul>
+			<li><%= link_to pond.street, pond %> <%= pond.distance.round(2) %> miles</li>
+		</ul>
+	<% end %>
+</div>

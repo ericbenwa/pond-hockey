@@ -14,7 +14,7 @@
 		</p>
 
 		<p>
-			<%= @pond_status_message %>
+			Status: <em><%= @pond_status_message %></em>
 		</p>
 
 	</div>
@@ -50,9 +50,9 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 
 <div>
 	<h4>Nearby Ponds</h4>
-	<% for pond in @pond.nearbys(10) %>
+	<% for pond in @pond.nearbys(5) %>
 		<ul>
-			<li><%= link_to pond.street, pond %> <%= pond.distance.round(2) %> miles</li>
+			<li><%= link_to "#{pond.street}, #{pond.city}, #{pond.state}", pond %> <%= pond.distance.round(2) %> miles</li>
 		</ul>
 	<% end %>
 </div>

@@ -19,9 +19,9 @@ class PondsController < ApplicationController
 
 		# Merely a demonstration of utilizing data to regurgitate.
 		if temp < 32
-			@pond_status_message = "Pond is freezing."
+			@pond_status_message = "Pond is cold enough to skate."
 		else
-			@pond_status_message = "Pond is not freezing."
+			@pond_status_message = "Pond is not cold enough to skate."
 		end
 
 		@comment = Comment.new

@@ -3,8 +3,8 @@
 		<h1><%= @pond.street %></h1>
 
 		<p>
-			<%= @pond.lat %>
-			<%= @pond.long %>
+			<%= @pond.latitude %>
+			<%= @pond.longitude %>
 		</p>
 
 		<p>
@@ -14,13 +14,11 @@
 		</p>
 
 		<p>
-			<%= @stupid %>
+			<%= @pond_status_message %>
 		</p>
 
 	</div>
 </div>
-
-<!-- <%= render "shared/photos" %> -->
 
 <%= render "comments/show" %>
 
@@ -35,8 +33,8 @@
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   markers = handler.addMarkers([
     {
-      "lat": <%= @pond.lat %>,
-      "lng": <%= @pond.long %>,
+      "lat": <%= @pond.latitude %>,
+      "lng": <%= @pond.longitude %>,
       "picture": {
         "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
         "width":  36,

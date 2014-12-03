@@ -10,18 +10,18 @@ class PondsController < ApplicationController
 	# Get an individual pond.
 	def show
 		@pond = Pond.find(params[:id])
-		lat = @pond.lat
-		long = @pond.long
+		latitude = @pond.latitude
+		longitude = @pond.longitude
 
 		# Get weather for pond.
-		@forecast = ForecastIO.forecast(lat, long)
+		@forecast = ForecastIO.forecast(latitude, longitude)
 		temp = @forecast.currently.temperature.round
 
 		# Merely a demonstration of utilizing data to regurgitate.
-		if temp < 40
-			@stupid = "Cold"
+		if temp < 32
+			@pond_status_message = "Pond is freezing."
 		else
-			@stupid = "Warm"
+			@pond_status_message = "Pond is not freezing."
 		end
 
 		@comment = Comment.new
@@ -37,7 +37,7 @@ class PondsController < ApplicationController
 	# Create a pond.
 	def create
 		@user = user_session
-		@pond = Pond.create!(params.require(:pond).permit(:street, :city, :state, :lat, :long, :user_id))
+		@pond = Pond.create!(params.require(:pond).permit(:street, :city, :state, :latitude, :longitude, :user_id))
 		redirect_to @pond
 	end
 
@@ -45,6 +45,6 @@ class PondsController < ApplicationController
 	private
 
 		def product_params
-			params.require(:pond).permit(:street, :city, :state, :lat, :long, :user_id)
+			params.require(:pond).permit(:street, :city, :state, :latitude, :longitude, :user_id)
 		end
 end

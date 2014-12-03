@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121025823) do
+ActiveRecord::Schema.define(version: 20141203005458) do
 
   create_table "comments", force: true do |t|
     t.string   "comment"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20141121025823) do
     t.string   "city"
     t.string   "state"
     t.integer  "user_id"
-    t.float    "lat"
-    t.float    "long"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "ponds", ["user_id"], name: "index_ponds_on_user_id"

@@ -4,6 +4,7 @@
 	<p>
 		<%= comment.comment %><br />
 		User ID <%= comment.user_id %><br />
-		<%= User.where(id: comment.user_id) %>
+		<% test = User.find(comment.user_id) %>
+		<%= test.email %>
 	</p>
 <% end %>

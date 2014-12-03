@@ -1,6 +1,11 @@
 class Pond < ActiveRecord::Base
 	belongs_to :user
 	has_many :comments
-	geocoded_by :street
+
+	def full_address
+	  [street, city, state].compact.join(', ')
+	end
+
+	geocoded_by :full_address
 	after_validation :geocode
 end

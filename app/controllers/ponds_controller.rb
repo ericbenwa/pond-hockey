@@ -10,15 +10,15 @@ class PondsController < ApplicationController
 	# Get an individual pond.
 	def show
 		@pond = Pond.find(params[:id])
-		put @pond
+		puts @pond
 		latitude = @pond.latitude
-		put latitude
+		puts latitude
 		longitude = @pond.longitude
-		put longitude
+		puts longitude
 
 		# Get weather for pond.
 		@forecast = ForecastIO.forecast(latitude, longitude)
-		put @forecast
+		puts @forecast
 		temp = @forecast.currently.temperature.round
 
 		# Merely a demonstration of utilizing data to regurgitate.

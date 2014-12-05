@@ -15,6 +15,7 @@ class PondsController < ApplicationController
 		puts latitude
 		longitude = @pond.longitude
 		puts longitude
+		puts "blank"
 
 		# Get weather for pond.
 		@forecast = ForecastIO.forecast(latitude, longitude)

@@ -15,11 +15,12 @@ class PondsController < ApplicationController
 		puts latitude
 		longitude = @pond.longitude
 		puts longitude
-		puts "blank"
+		puts "end lat long check"
 
 		# Get weather for pond.
 		@forecast = ForecastIO.forecast(latitude, longitude)
 		puts @forecast
+		puts "end forecast check"
 		temp = @forecast.currently.temperature.round
 
 		# Merely a demonstration of utilizing data to regurgitate.
